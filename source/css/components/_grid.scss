@@ -1,0 +1,61 @@
+
+// Grid Helper Classes (Grids provided by Bourbon Neat configured in defaults/_grid-settings.scss)
+
+#grid-example .one,
+#grid-example .two,
+#grid-example .three,
+#grid-example .four,
+#grid-example .five,
+#grid-example .six,
+#grid-example .seven,
+#grid-example .eight,
+#grid-example .nine,
+#grid-example .ten,
+#grid-example .eleven,
+#grid-example .twelve,
+#grid-example .thirteen,
+#grid-example .fourteen,
+#grid-example .fifteen,
+#grid-example .sixteen,
+#grid-example .seventeen,
+#grid-example .eighteen,
+#grid-example .nineteen,
+#grid-example .twenty,
+#grid-example .twentyone,
+#grid-example .twentytwo,
+#grid-example .twentythree,
+#grid-example .twentyfour{
+    background: #ccc;
+    border: 1px solid #bbb;
+    height: 32px;
+    line-height: 32px;
+}
+
+.row {
+    @include outer-container;
+}
+
+// Creating column classes
+@for $i from 1 through $grid-columns {
+    .#{convert-number-to-word($i)} { @include span-columns($i); }
+}
+
+// Creating .row-# classes
+  @for $i from 1 through $grid-columns {
+    .row {
+      .#{convert-number-to-word($i)} { @extend .#{convert-number-to-word($i)}; }
+    }
+  }
+
+  // Creating .row .offset-by-# classes
+  @for $i from 1 through $grid-columns - 2 {
+    .row {
+      .offset-by-#{convert-number-to-word($i)} { @include shift($i); }
+    }
+  }
+
+  // Creating .row .push-# classes
+  @for $i from 2 through $grid-columns - 2 {
+    .push-#{convert-number-to-word($i)} { @include shift($i); }
+    .pull-#{convert-number-to-word($i)} { @include shift($i); }
+  }

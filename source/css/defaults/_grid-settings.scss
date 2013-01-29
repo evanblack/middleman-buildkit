@@ -1,0 +1,16 @@
+
+// Change the grid settings (mobile-first by default)
+$border-box-sizing: true;
+$column: 4em;
+$gutter: 1em;
+$grid-columns: 12;
+$max-width: em(1200);
+
+$visual-grid: false;
+//$visual-grid-color: #dddddd;
+//$visual-grid-index: front;
+//$visual-grid-opacity: 0.5;
+
+// Define your breakpoints
+$tablet: new-breakpoint(min-width 37.5em 8);
+$desktop: new-breakpoint(min-width 64em 12);

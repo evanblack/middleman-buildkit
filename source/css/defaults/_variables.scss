@@ -1,0 +1,39 @@
+// Colors Settings
+
+$main-color: #2ba6cb !default;
+$secondary-color: #e9e9e9 !default;
+$alert-color: #c60f13 !default;
+$success-color: #5da423 !default;
+$txt-color: #222 !default;
+$highlight-color: #ffff99 !default;
+$black: #000 !default;
+$white: #fff !default;
+$shinyEdge: rgba(#fff, .5) !default;
+$darkEdge: rgba(#000, .2) !default;
+
+// Font Settings
+
+$font-smoothing: antialiased !default;
+$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$header-font-weight: bold !default;
+$header-font-style: normal !default;
+$header-font-color: #222 !default;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-weight: normal !default;
+$body-font-style: normal !default;
+$body-font-color: $txt-color !default;
+$base-line-height: 1.6 !default;
+
+// Text Direction Settings
+
+$text-direction: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
+$default-float: left !default; // Change this to 'right' for right-to-left languages
+$default-opposite: right !default; // Change this to 'left' for right-to-left languages
+
+@if $text-direction == ltr {
+  $default-float: left;
+  $default-opposite: right;
+} @else {
+  $default-float: right;
+  $default-opposite: left;
+}
